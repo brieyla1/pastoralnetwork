@@ -14,8 +14,6 @@ export const NextLink = ({ href, children, ...rest }: Record<string, any>) => (
 const MenuItems: FC = () => {
   const currentProfile = useAppStore((state) => state.currentProfile);
 
-  console.log('currentProfile', currentProfile);
-
   if (!currentProfile) {
     return <LoginButton />;
   }

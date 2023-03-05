@@ -110,7 +110,7 @@ export const ATTACHMENT = '1000,fit';
 
 // Localstorage keys
 export const LS_KEYS = {
-  Pastoral_STORE: 'Pastoral.store',
+  Pastoral_STORE: 'lenster.store',
   PREFERENCES_STORE: 'preferences.store',
   TRANSACTION_STORE: 'transaction.store',
   TIMELINE_STORE: 'timeline.store',
@@ -120,5 +120,5 @@ export const LS_KEYS = {
 
 // S3 bucket
 export const S3_BUCKET = {
-  Pastoral_MEDIA: 'Pastoral-media'
+  Pastoral_MEDIA: 'pastoral-media'
 };

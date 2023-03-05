@@ -7,5 +7,5 @@ routes = [
 keep_vars = true
 
 [env.production.vars]
-EVER_ACCESS_KEY = ""
-EVER_ACCESS_SECRET = ""
+EVER_ACCESS_KEY = "756f9caa465b4366ab0221f30627183d"
+EVER_ACCESS_SECRET = "4A4DfLPI221uHwmE73AxZ72TqiLviz4vjH8KfTGw"

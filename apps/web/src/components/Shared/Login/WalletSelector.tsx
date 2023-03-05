@@ -47,10 +47,7 @@ const WalletSelector: FC<Props> = ({ setHasConnected, setHasProfile }) => {
 
   const onConnect = async (connector: Connector) => {
     try {
-      console.log(address);
-      console.log('connector', connector);
       const account = await connectAsync({ connector });
-      console.log('account', account);
       if (account) {
         setHasConnected(true);
       }
@@ -80,10 +77,14 @@ const WalletSelector: FC<Props> = ({ setHasConnected, setHasProfile }) => {
         message: challenge?.data?.challenge?.text
       });
 
+      console.log('signature', signature);
+
       // Auth user and set cookies
       const auth = await authenticate({
         variables: { request: { address, signature } }
       });
+
+      console.log('auth', auth);
 
       localStorage.setItem('accessToken', auth.data?.authenticate.accessToken);
       localStorage.setItem('refreshToken', auth.data?.authenticate.refreshToken);

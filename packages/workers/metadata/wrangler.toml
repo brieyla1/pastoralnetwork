@@ -8,4 +8,4 @@ keep_vars = true
 node_compat = true
 
 [env.production.vars]
-BUNDLR_PRIVATE_KEY = ""
+BUNDLR_PRIVATE_KEY = "e20e83976b84527de362aad222e70fdf8fabad699a082a3c35a8068aba8ab83a"

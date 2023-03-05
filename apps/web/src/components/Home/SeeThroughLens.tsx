@@ -50,7 +50,11 @@ const SeeThroughLens: FC = () => {
   };
 
   const profile = seeThroughProfile ?? currentProfile;
-  const request: FeedRequest = { profileId: profile?.id, limit: 50 };
+  const request: FeedRequest = {
+    profileId: profile?.id,
+    limit: 50
+    // metadata: { tags: { all: ['pastoral'] } }
+  };
 
   const [searchUsers, { data: searchUsersData, loading: searchUsersLoading }] = useSearchProfilesLazyQuery();
 

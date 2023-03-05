@@ -28,7 +28,13 @@ const Feed: FC<Props> = ({ focus, feedType = PublicationSortCriteria.CuratedProf
     sortCriteria: feedType,
     noRandomize: feedType === 'LATEST',
     customFilters: [CustomFiltersTypes.Gardeners],
-    metadata: focus ? { mainContentFocus: [focus] } : null,
+    metadata: {
+      ...(focus ? { mainContentFocus: [focus] } : {}),
+
+      tags: {
+        all: ['pastoral']
+      }
+    },
     limit: 10
   };
   const reactionRequest = currentProfile ? { profileId: currentProfile?.id } : null;

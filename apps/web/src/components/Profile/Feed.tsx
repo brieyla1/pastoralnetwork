@@ -63,6 +63,7 @@ const Feed: FC<Props> = ({ profile, type }) => {
           mainContentFocus: getMediaFilters()
         }
       : null;
+
   const request: PublicationsQueryRequest = {
     publicationTypes,
     metadata,

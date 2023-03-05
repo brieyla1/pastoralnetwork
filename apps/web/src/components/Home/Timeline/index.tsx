@@ -43,7 +43,16 @@ const Timeline: FC = () => {
 
   // Variables
   const profileId = seeThroughProfile?.id ?? currentProfile?.id;
-  const request: FeedRequest = { profileId, limit: 50, feedEventItemTypes: getFeedEventItems() };
+  const request: FeedRequest = {
+    profileId,
+    limit: 50,
+    feedEventItemTypes: getFeedEventItems(),
+    metadata: {
+      tags: {
+        all: ['pastoral']
+      }
+    }
+  };
   const reactionRequest = currentProfile ? { profileId } : null;
 
   const { data, loading, error, fetchMore } = useTimelineQuery({
