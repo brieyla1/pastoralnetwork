@@ -258,20 +258,7 @@ const ProfileSettingsForm: FC<Props> = ({ profile }) => {
             </div>
           </div>
         </div>
-        <div className="space-y-2 pt-4">
-          <div className="label flex items-center space-x-2">
-            <img className="h-5 w-5" src="/pride.svg" alt="Pride Logo" />
-            <span>
-              <Trans>Celebrate pride every day</Trans>
-            </span>
-          </div>
-          <div className="flex items-center space-x-2">
-            <Toggle on={pride} setOn={setPride} />
-            <div className="lt-text-gray-500">
-              <Trans>Turn this on to show your pride and turn the {APP_NAME} logo rainbow every day.</Trans>
-            </div>
-          </div>
-        </div>
+
         <Button
           className="ml-auto"
           type="submit"

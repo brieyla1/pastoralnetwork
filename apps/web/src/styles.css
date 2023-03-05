@@ -59,11 +59,12 @@ body {
   background: linear-gradient(
       90deg,
       theme('colors.white'),
-      theme('colors.white') 50%,
+      theme('colors.white') 30%,
       theme('colors.transparent')
     ),
-    url(https://static-assets.lenster.xyz/images/hero.webp);
+    url("/assets/img/hero.jpg");
   background-size: cover;
+
 }
 .dark .bg-hero {
   background: linear-gradient(
@@ -72,6 +73,7 @@ body {
       theme('colors.black') 50%,
       theme('colors.transparent')
     ),
+    
     url(https://static-assets.lenster.xyz/images/hero.webp);
   background-size: cover;
 }

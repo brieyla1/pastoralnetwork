@@ -50,6 +50,7 @@ const Layout: FC<Props> = ({ children }) => {
   const disconnectXmtp = useDisconnectXmtp();
 
   const resetAuthState = () => {
+    console.log('resetAuthState');
     setProfileId(null);
     setCurrentProfile(null);
   };

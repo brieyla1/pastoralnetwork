@@ -84,6 +84,7 @@ const WalletSelector: FC<Props> = ({ setHasConnected, setHasProfile }) => {
       const auth = await authenticate({
         variables: { request: { address, signature } }
       });
+
       localStorage.setItem('accessToken', auth.data?.authenticate.accessToken);
       localStorage.setItem('refreshToken', auth.data?.authenticate.refreshToken);
 
@@ -101,9 +102,11 @@ const WalletSelector: FC<Props> = ({ setHasConnected, setHasProfile }) => {
           ?.sort((a, b) => Number(a.id) - Number(b.id))
           ?.sort((a, b) => (a.isDefault === b.isDefault ? 0 : a.isDefault ? -1 : 1));
         const currentProfile = profiles[0];
-        setProfiles(profiles);
-        setCurrentProfile(currentProfile);
-        setProfileId(currentProfile.id);
+        if (currentProfile) {
+          setProfiles(profiles);
+          setProfileId(currentProfile.id);
+          setCurrentProfile(currentProfile);
+        }
       }
       Mixpanel.track(AUTH.SIWL);
     } catch (error) {

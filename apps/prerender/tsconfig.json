@@ -4,9 +4,18 @@
     "baseUrl": ".",
     "noEmit": true,
     "paths": {
-      "@components*": ["src/components*"],
-      "@lib*": ["src/lib*"]
-    }
+      "@components*": [
+        "src/components*"
+      ],
+      "@lib*": [
+        "src/lib*"
+      ]
+    },
+    "jsx": "preserve"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ]
 }

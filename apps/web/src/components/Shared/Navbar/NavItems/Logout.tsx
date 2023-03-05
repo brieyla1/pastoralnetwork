@@ -25,6 +25,7 @@ const Logout: FC<Props> = ({ onClick, className = '' }) => {
   const logout = () => {
     Mixpanel.track(PROFILE.LOGOUT);
     disconnectXmtp();
+
     setCurrentProfile(null);
     setProfileId(null);
     resetAuthData();
