@@ -10,7 +10,8 @@
     "noEmit": true,
     "module": "esnext",
     "resolveJsonModule": true,
-    "jsx": "preserve",
+    // "jsx": "preserve",
+    "jsx": "react",
     "incremental": true
   },
   "exclude": ["node_modules", ".next", ".turbo"]
