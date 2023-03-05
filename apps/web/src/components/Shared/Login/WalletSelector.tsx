@@ -47,7 +47,10 @@ const WalletSelector: FC<Props> = ({ setHasConnected, setHasProfile }) => {
 
   const onConnect = async (connector: Connector) => {
     try {
+      console.log(address);
+      console.log('connector', connector);
       const account = await connectAsync({ connector });
+      console.log('account', account);
       if (account) {
         setHasConnected(true);
       }

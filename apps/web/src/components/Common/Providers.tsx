@@ -17,22 +17,37 @@ import client from '../../apollo';
 import ErrorBoundary from './ErrorBoundary';
 import Layout from './Layout';
 
-const { chains, provider } = configureChains(
-  [IS_MAINNET ? polygon : polygonMumbai, mainnet],
+import { MagicAuthConnector } from '@everipedia/wagmi-magic-connector';
+
+const { chains, provider, webSocketProvider } = configureChains(
+  [IS_MAINNET ? polygon : polygonMumbai],
   [alchemyProvider({ apiKey: ALCHEMY_KEY })]
 );
 
 const connectors = () => {
   return [
     new InjectedConnector({ chains, options: { shimDisconnect: true } }),
-    new WalletConnectConnector({ chains, options: {} })
+    new WalletConnectConnector({ chains, options: {} }),
+    new MagicAuthConnector({
+      options: {
+        magicSdkConfiguration: {
+          network: {
+            chainId: IS_MAINNET ? 137 : 80001,
+            rpcUrl: IS_MAINNET ? 'https://rpc-mainnet.maticvigil.com' : 'https://rpc-mumbai.maticvigil.com'
+          }
+        },
+        apiKey: 'pk_live_1E39FE6CAD5D528A'
+      }
+    })
   ];
 };
 
 const wagmiClient = createClient({
   autoConnect: true,
+  // @ts-ignore
   connectors,
-  provider
+  provider,
+  webSocketProvider
 });
 
 const queryClient = new QueryClient();

@@ -68,7 +68,7 @@ export const METADATA_WORKER_URL = IS_PRODUCTION ? 'https://metadata.lenster.xyz
 export const FRESHDESK_WORKER_URL = IS_PRODUCTION ? 'https://freshdesk.lenster.xyz' : 'http://localhost:8084';
 
 // Web3
-export const ALCHEMY_KEY = 'HHfOFn8jsYguteTVvL0cz4g9aydrbjTV';
+export const ALCHEMY_KEY = 'QlftM14-d8YilLB_fAMb-AwflElcwEnT';
 
 // Errors
 export const ERRORS = {
