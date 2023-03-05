@@ -18,7 +18,7 @@ export const Checkbox = forwardRef<HTMLInputElement, Props>(function CheckBox(
       <input
         ref={ref}
         className={clsx(
-          'float-left mr-2 h-4 w-4 cursor-pointer appearance-none rounded border border-gray-300 bg-white bg-contain bg-center bg-no-repeat align-top transition duration-200 checked:border-blue-600 checked:bg-blue-600 focus:outline-none',
+          'bg-card float-left mr-2 h-4 w-4 cursor-pointer appearance-none rounded border border-gray-300 bg-contain bg-center bg-no-repeat align-top transition duration-200 checked:border-blue-600 checked:bg-blue-600 focus:outline-none',
           className
         )}
         type="checkbox"

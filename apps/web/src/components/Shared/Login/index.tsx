@@ -50,7 +50,7 @@ const Login: FC = () => {
               Visit{' '}
               <a
                 className="font-bold"
-                href="https://claim.lens.xyz"
+                href="https://claim.lenster.xyz"
                 target="_blank"
                 rel="noreferrer noopener"
               >

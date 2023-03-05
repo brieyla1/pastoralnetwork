@@ -109,7 +109,7 @@ const SeeThroughLens: FC = () => {
       <MenuTransition>
         <Menu.Items
           static
-          className="absolute right-0 z-[5] mt-1 w-64 rounded-xl border bg-white shadow-sm focus:outline-none dark:border-gray-700 dark:bg-gray-900"
+          className="bg-card absolute right-0 z-[5] mt-1 w-64 rounded-xl border shadow-sm focus:outline-none dark:border-gray-700 dark:bg-gray-900"
         >
           <div className="px-3 pt-2 text-xs">
             <Trans>👀 See the feed through...</Trans>

@@ -94,7 +94,7 @@ const Unfollow: FC<Props> = ({ profile, showText = false, setFollowing }) => {
         typedDataLoading || signLoading || writeLoading ? (
           <Spinner variant="danger" size="xs" />
         ) : (
-          <UserRemoveIcon className="h-4 w-4" />
+          <UserRemoveIcon className="h-10 w-10" />
         )
       }
     >

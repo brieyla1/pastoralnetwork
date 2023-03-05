@@ -71,7 +71,7 @@ const Details: FC<Props> = ({ profile, following, setFollowing }) => {
   const followType = profile?.followModule?.__typename;
 
   return (
-    <div className="mb-4 space-y-5 px-5 sm:px-0">
+    <div className="space-y-2 px-5 sm:px-0">
       <div className="relative -mt-24 h-32 w-32 sm:-mt-32 sm:h-52 sm:w-52">
         <Image
           onError={({ currentTarget }) => {
@@ -111,12 +111,12 @@ const Details: FC<Props> = ({ profile, following, setFollowing }) => {
           <Markup>{profile?.bio}</Markup>
         </div>
       )}
-      <div className="space-y-5">
+      <div className="flex flex-col space-y-5">
         <Followerings profile={profile} />
-        <div>
+        <div className="mx-auto">
           {currentProfile?.id === profile?.id ? (
             <Link href="/settings">
-              <Button variant="secondary" icon={<CogIcon className="h-5 w-5" />} outline>
+              <Button variant="secondary" icon={<CogIcon className="h-10 w-10" />} outline>
                 <Trans>Edit Profile</Trans>
               </Button>
             </Link>
@@ -162,39 +162,12 @@ const Details: FC<Props> = ({ profile, following, setFollowing }) => {
         )}
         <div className="divider w-full" />
         <div className="space-y-2">
-          <MetaDetails icon={<HashtagIcon className="h-4 w-4" />}>
-            <Tooltip content={`#${profile?.id}`}>
-              <a
-                href={`${RARIBLE_URL}/token/polygon/${getEnvConfig().lensHubProxyAddress}:${parseInt(
-                  profile?.id
-                )}`}
-                target="_blank"
-                rel="noreferrer"
-              >
-                {parseInt(profile?.id)}
-              </a>
-            </Tooltip>
-          </MetaDetails>
           {getProfileAttribute(profile?.attributes, 'location') && (
             <MetaDetails icon={<LocationMarkerIcon className="h-4 w-4" />}>
               {getProfileAttribute(profile?.attributes, 'location') as any}
             </MetaDetails>
           )}
-          {profile?.onChainIdentity?.ens?.name && (
-            <MetaDetails
-              icon={
-                <img
-                  src={`${STATIC_IMAGES_URL}/brands/ens.svg`}
-                  className="h-4 w-4"
-                  height={16}
-                  width={16}
-                  alt="ENS Logo"
-                />
-              }
-            >
-              {profile?.onChainIdentity?.ens?.name}
-            </MetaDetails>
-          )}
+
           {getProfileAttribute(profile?.attributes, 'website') && (
             <MetaDetails
               icon={
@@ -258,7 +231,7 @@ const Details: FC<Props> = ({ profile, following, setFollowing }) => {
           )}
         </div>
       </div>
-      <Badges profile={profile} />
+      {/* <Badges profile={profile} /> */}
       {isStaff(currentProfile?.id) && staffMode && <ProfileStaffTool profile={profile} />}
     </div>
   );

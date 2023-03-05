@@ -5,7 +5,7 @@ import { Button } from '@components/UI/Button';
 import { Card } from '@components/UI/Card';
 import { ErrorMessage } from '@components/UI/ErrorMessage';
 import { Spinner } from '@components/UI/Spinner';
-import type { LensterAttachment } from '@generated/types';
+import type { PastoralAttachment } from '@generated/types';
 import type { IGif } from '@giphy/js-types';
 import { ChatAlt2Icon, PencilAltIcon } from '@heroicons/react/outline';
 import type { CollectCondition, EncryptedMetadata, FollowCondition } from '@lens-protocol/sdk-gated';
@@ -442,7 +442,7 @@ const NewPublication: FC<Props> = ({ publication }) => {
         });
       }
 
-      const attachmentsInput: LensterAttachment[] = attachments.map((attachment) => ({
+      const attachmentsInput: PastoralAttachment[] = attachments.map((attachment) => ({
         type: attachment.type,
         altTag: attachment.altTag,
         item: attachment.item!

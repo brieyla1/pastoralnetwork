@@ -152,7 +152,7 @@ const Gallery: FC<Props> = ({ galleries }) => {
             <MenuTransition>
               <Menu.Items
                 static
-                className="absolute right-0 z-[5] mt-1 rounded-xl border bg-white py-1 shadow-sm focus:outline-none dark:border-gray-700/80 dark:bg-gray-900"
+                className="bg-card absolute right-0 z-[5] mt-1 rounded-xl border py-1 shadow-sm focus:outline-none dark:border-gray-700/80 dark:bg-gray-900"
               >
                 <Menu.Item
                   as="label"

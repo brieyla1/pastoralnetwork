@@ -13,12 +13,14 @@ module.exports = {
     extend: {
       colors: {
         gray: colors.zinc,
-        brand: colors.violet,
+        brand: colors.green,
         red: colors.red,
         pink: colors.pink,
         blue: colors.blue,
         green: colors.emerald,
-        yellow: colors.yellow
+        yellow: colors.yellow,
+        back: '#ece4d4',
+        card: '#F4F1EB'
       }
     }
   },

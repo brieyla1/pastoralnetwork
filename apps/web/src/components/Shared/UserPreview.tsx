@@ -132,7 +132,7 @@ const UserPreview: FC<Props> = ({
           arrow={false}
           interactive
           zIndex={1000}
-          className="hidden w-64 !rounded-xl border !bg-white !px-1.5 !py-3 !text-black dark:border-gray-700 dark:!bg-black dark:!text-white md:block"
+          className="!bg-card hidden w-64 !rounded-xl border !px-1.5 !py-3 !text-black dark:border-gray-700 dark:!bg-black dark:!text-white md:block"
           appendTo={() => document.body}
         >
           <span>{children}</span>

@@ -15,7 +15,7 @@ const headers = {
   'Access-Control-Allow-Origin': '*',
   'Content-Type': 'application/json'
 };
-const bucketName = 'lenster-media';
+const bucketName = 'Pastoral-media';
 const everEndpoint = 'https://endpoint.4everland.co';
 
 const params = {

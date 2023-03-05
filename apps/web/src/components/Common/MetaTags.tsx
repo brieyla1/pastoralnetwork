@@ -32,7 +32,7 @@ const MetaTags: FC<Props> = ({ title = APP_NAME, description = DESCRIPTION }) =>
       <meta property="twitter:image:src" content={DEFAULT_OG} />
       <meta property="twitter:image:width" content="400" />
       <meta property="twitter:image:height" content="400" />
-      <meta property="twitter:creator" content="lensterxyz" />
+      <meta property="twitter:creator" content="Pastoralxyz" />
 
       <link
         rel="search"

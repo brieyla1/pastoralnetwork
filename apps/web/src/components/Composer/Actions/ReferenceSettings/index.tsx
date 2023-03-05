@@ -78,7 +78,7 @@ const ReferenceSettings: FC = () => {
       <MenuTransition>
         <Menu.Items
           static
-          className="absolute z-[5] mt-2 rounded-xl border bg-white py-1 shadow-sm focus:outline-none dark:border-gray-700 dark:bg-gray-900"
+          className="bg-card absolute z-[5] mt-2 rounded-xl border py-1 shadow-sm focus:outline-none dark:border-gray-700 dark:bg-gray-900"
         >
           <Module
             title={EVERYONE}

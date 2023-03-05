@@ -25,7 +25,7 @@ const circluarStd = localFont({
       style: 'bold'
     }
   ],
-  variable: '--lenster-font',
+  variable: '--Pastoral-font',
   fallback: ['sans-serif'],
   preload: true,
   display: 'swap'

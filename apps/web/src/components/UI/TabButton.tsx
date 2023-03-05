@@ -25,7 +25,7 @@ const TabButton: FC<Props> = ({ name, icon, active, type, showOnSm = false, onCl
       }}
       className={clsx(
         { 'text-brand bg-brand-100 bg-opacity-100 dark:bg-opacity-20': active },
-        'hover:bg-brand-100 flex items-center space-x-2 rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-opacity-100 dark:hover:bg-opacity-20 sm:px-3 sm:py-1.5'
+        'hover:bg-brand-100 flex items-center space-x-2 rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-opacity-100 dark:hover:bg-opacity-20 sm:px-5 sm:py-3'
       )}
       aria-label={name}
     >

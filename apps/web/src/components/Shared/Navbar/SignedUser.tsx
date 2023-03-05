@@ -58,7 +58,7 @@ const SignedUser: FC = () => {
         <MenuTransition>
           <Menu.Items
             static
-            className="absolute right-0 mt-2 w-48 rounded-xl border bg-white py-1 shadow-sm focus:outline-none dark:border-gray-700 dark:bg-black"
+            className="bg-card absolute right-0 mt-2 w-48 rounded-xl border py-1 shadow-sm focus:outline-none dark:border-gray-700 dark:bg-black"
           >
             <Menu.Item
               as={NextLink}

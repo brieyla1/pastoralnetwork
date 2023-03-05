@@ -40,7 +40,7 @@ const handleRequest = async (request: Request, env: EnvType) => {
       body: JSON.stringify({
         From: 'contact@lenster.xyz',
         ReplyTo: email,
-        To: 'support@lenster.freshdesk.com',
+        To: 'support@Pastoral.freshdesk.com',
         Subject: subject,
         TextBody: body,
         MessageStream: 'outbound'

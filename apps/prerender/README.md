@@ -1,1 +1,1 @@
-# Lenster Prerender for SEO
+# Pastoral Prerender for SEO

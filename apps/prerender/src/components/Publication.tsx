@@ -20,7 +20,7 @@ const Publication: FC<Props> = ({ publication }) => {
   const profile: any =
     publication?.__typename === 'Mirror' ? publication?.mirrorOf?.profile : publication?.profile;
 
-  const title = `${publication?.__typename === 'Post' ? 'Post' : 'Comment'} by @${profile.handle} • Lenster`;
+  const title = `${publication?.__typename === 'Post' ? 'Post' : 'Comment'} by @${profile.handle} • Pastoral`;
   const description = publication.metadata?.content ?? '';
   const image = hasMedia
     ? getIPFSLink(publication.metadata?.media[0].original.url)

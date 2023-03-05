@@ -44,6 +44,6 @@ export const useAppPersistStore = create(
       notificationCount: 0,
       setNotificationCount: (notificationCount) => set(() => ({ notificationCount }))
     }),
-    { name: LS_KEYS.LENSTER_STORE }
+    { name: LS_KEYS.Pastoral_STORE }
   )
 );

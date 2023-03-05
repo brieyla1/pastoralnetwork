@@ -6,13 +6,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: ru\n"
-"Project-Id-Version: lenster\n"
+"Project-Id-Version: Pastoral\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2023-03-03 01:49\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "Plural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\n"
-"X-Crowdin-Project: lenster\n"
+"X-Crowdin-Project: Pastoral\n"
 "X-Crowdin-Project-ID: 552311\n"
 "X-Crowdin-Language: ru\n"
 "X-Crowdin-File: messages.po\n"
@@ -320,7 +320,7 @@ msgid "Direct messages are here!"
 msgstr ""
 
 #: src/components/Home/EnableMessages.tsx
-msgid "Activate XMTP to start using Lenster to send end-to-end encrypted DMs to frens."
+msgid "Activate XMTP to start using Pastoral to send end-to-end encrypted DMs to frens."
 msgstr ""
 
 #: src/components/Home/EnableMessages.tsx
@@ -783,7 +783,7 @@ msgid "By accessing the Site, you agree to not only this Privacy Policy, but als
 msgstr ""
 
 #: src/components/Pages/Privacy.tsx
-msgid "This Privacy Policy (the “Privacy Policy”) provides a comprehensive description of how Lenster (“we,” “our,” or “us”) collects, uses, and shares information about you in connection with the website at lenster.xyz”, as well as your rights and choices regarding such information."
+msgid "This Privacy Policy (the “Privacy Policy”) provides a comprehensive description of how Pastoral (“we,” “our,” or “us”) collects, uses, and shares information about you in connection with the website at lenster.xyz”, as well as your rights and choices regarding such information."
 msgstr ""
 
 #: src/components/Pages/Privacy.tsx
@@ -1762,7 +1762,7 @@ msgid "Interests settings • {APP_NAME}"
 msgstr ""
 
 #: src/components/Settings/Interests/index.tsx
-msgid "Interests you select are used to personalize your experience across Lenster. You can adjust your interests if something doesn't look right."
+msgid "Interests you select are used to personalize your experience across Pastoral. You can adjust your interests if something doesn't look right."
 msgstr ""
 
 #: src/components/Settings/Preferences/LikesPreferences.tsx
@@ -1976,7 +1976,7 @@ msgid "Translate"
 msgstr ""
 
 #: src/components/Shared/Footer/index.tsx
-msgid "▲ Powered by Vercel"
+msgid "Powered by Pastoral"
 msgstr ""
 
 #: src/components/Shared/GlobalModals.tsx

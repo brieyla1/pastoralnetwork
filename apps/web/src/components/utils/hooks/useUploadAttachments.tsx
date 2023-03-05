@@ -1,4 +1,4 @@
-import type { NewLensterAttachment } from '@generated/types';
+import type { NewPastoralAttachment } from '@generated/types';
 import uploadToIPFS from '@lib/uploadToIPFS';
 import { t } from '@lingui/macro';
 import { useCallback } from 'react';
@@ -13,12 +13,12 @@ const useUploadAttachments = () => {
   const setIsUploading = usePublicationStore((state) => state.setIsUploading);
 
   const handleUploadAttachments = useCallback(
-    async (attachments: any): Promise<NewLensterAttachment[]> => {
+    async (attachments: any): Promise<NewPastoralAttachment[]> => {
       setIsUploading(true);
       const files = Array.from(attachments);
       const attachmentIds: string[] = [];
 
-      const previewAttachments: NewLensterAttachment[] = files.map((file: any) => {
+      const previewAttachments: NewPastoralAttachment[] = files.map((file: any) => {
         const attachmentId = uuid();
         attachmentIds.push(attachmentId);
 
@@ -54,7 +54,7 @@ const useUploadAttachments = () => {
       });
 
       addAttachments(previewAttachments);
-      let attachmentsIPFS: NewLensterAttachment[] = [];
+      let attachmentsIPFS: NewPastoralAttachment[] = [];
       try {
         if (hasLargeAttachment.includes(false)) {
           setIsUploading(false);
@@ -64,7 +64,7 @@ const useUploadAttachments = () => {
 
         const attachmentsUploaded = await uploadToIPFS(attachments);
         if (attachmentsUploaded) {
-          attachmentsIPFS = previewAttachments.map((attachment: NewLensterAttachment, index: number) => ({
+          attachmentsIPFS = previewAttachments.map((attachment: NewPastoralAttachment, index: number) => ({
             ...attachment,
             item: attachmentsUploaded[index].item
           }));

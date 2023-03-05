@@ -127,17 +127,17 @@ const DecryptedPublicationBody: FC<Props> = ({ encryptedPublication }) => {
   const cardClasses = 'text-sm rounded-xl w-fit p-9 shadow-sm bg-gradient-to-tr from-brand-400 to-brand-600';
 
   // Status
-  // Collect checks - https://docs.lens.xyz/docs/gated#collected-publication
+  // Collect checks - https://docs.lenster.xyz/docs/gated#collected-publication
   const hasNotCollectedPublication = reasons?.includes(DecryptFailReason.HasNotCollectedPublication);
   const collectNotFinalisedOnChain =
     !hasNotCollectedPublication && reasons?.includes(DecryptFailReason.CollectNotFinalisedOnChain);
-  // Follow checks - https://docs.lens.xyz/docs/gated#profile-follow
+  // Follow checks - https://docs.lenster.xyz/docs/gated#profile-follow
   const doesNotFollowProfile = reasons?.includes(DecryptFailReason.DoesNotFollowProfile);
   const followNotFinalisedOnChain =
     !doesNotFollowProfile && reasons?.includes(DecryptFailReason.FollowNotFinalisedOnChain);
-  // Token check - https://docs.lens.xyz/docs/gated#erc20-token-ownership
+  // Token check - https://docs.lenster.xyz/docs/gated#erc20-token-ownership
   const unauthorizedBalance = reasons?.includes(DecryptFailReason.UnauthorizedBalance);
-  // NFT check - https://docs.lens.xyz/docs/gated#erc20-token-ownership
+  // NFT check - https://docs.lenster.xyz/docs/gated#erc20-token-ownership
   const doesNotOwnNft = reasons?.includes(DecryptFailReason.DoesNotOwnNft);
 
   const getDecryptedData = async () => {

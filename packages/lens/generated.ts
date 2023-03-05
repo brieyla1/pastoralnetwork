@@ -15784,11 +15784,11 @@ export type HasTxHashBeenIndexedQuery = {
       };
 };
 
-export type LensterStatsQueryVariables = Exact<{
+export type PastoralStatsQueryVariables = Exact<{
   request?: InputMaybe<GlobalProtocolStatsRequest>;
 }>;
 
-export type LensterStatsQuery = {
+export type PastoralStatsQuery = {
   __typename?: 'Query';
   globalProtocolStats: {
     __typename?: 'GlobalProtocolStats';
@@ -32560,8 +32560,8 @@ export type HasTxHashBeenIndexedQueryResult = Apollo.QueryResult<
   HasTxHashBeenIndexedQuery,
   HasTxHashBeenIndexedQueryVariables
 >;
-export const LensterStatsDocument = gql`
-  query LensterStats($request: GlobalProtocolStatsRequest) {
+export const PastoralStatsDocument = gql`
+  query PastoralStats($request: GlobalProtocolStatsRequest) {
     globalProtocolStats(request: $request) {
       totalProfiles
       totalPosts
@@ -32575,36 +32575,36 @@ export const LensterStatsDocument = gql`
 `;
 
 /**
- * __useLensterStatsQuery__
+ * __usePastoralStatsQuery__
  *
- * To run a query within a React component, call `useLensterStatsQuery` and pass it any options that fit your needs.
- * When your component renders, `useLensterStatsQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * To run a query within a React component, call `usePastoralStatsQuery` and pass it any options that fit your needs.
+ * When your component renders, `usePastoralStatsQuery` returns an object from Apollo Client that contains loading, error, and data properties
  * you can use to render your UI.
  *
  * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
  *
  * @example
- * const { data, loading, error } = useLensterStatsQuery({
+ * const { data, loading, error } = usePastoralStatsQuery({
  *   variables: {
  *      request: // value for 'request'
  *   },
  * });
  */
-export function useLensterStatsQuery(
-  baseOptions?: Apollo.QueryHookOptions<LensterStatsQuery, LensterStatsQueryVariables>
+export function usePastoralStatsQuery(
+  baseOptions?: Apollo.QueryHookOptions<PastoralStatsQuery, PastoralStatsQueryVariables>
 ) {
   const options = { ...defaultOptions, ...baseOptions };
-  return Apollo.useQuery<LensterStatsQuery, LensterStatsQueryVariables>(LensterStatsDocument, options);
+  return Apollo.useQuery<PastoralStatsQuery, PastoralStatsQueryVariables>(PastoralStatsDocument, options);
 }
-export function useLensterStatsLazyQuery(
-  baseOptions?: Apollo.LazyQueryHookOptions<LensterStatsQuery, LensterStatsQueryVariables>
+export function usePastoralStatsLazyQuery(
+  baseOptions?: Apollo.LazyQueryHookOptions<PastoralStatsQuery, PastoralStatsQueryVariables>
 ) {
   const options = { ...defaultOptions, ...baseOptions };
-  return Apollo.useLazyQuery<LensterStatsQuery, LensterStatsQueryVariables>(LensterStatsDocument, options);
+  return Apollo.useLazyQuery<PastoralStatsQuery, PastoralStatsQueryVariables>(PastoralStatsDocument, options);
 }
-export type LensterStatsQueryHookResult = ReturnType<typeof useLensterStatsQuery>;
-export type LensterStatsLazyQueryHookResult = ReturnType<typeof useLensterStatsLazyQuery>;
-export type LensterStatsQueryResult = Apollo.QueryResult<LensterStatsQuery, LensterStatsQueryVariables>;
+export type PastoralStatsQueryHookResult = ReturnType<typeof usePastoralStatsQuery>;
+export type PastoralStatsLazyQueryHookResult = ReturnType<typeof usePastoralStatsLazyQuery>;
+export type PastoralStatsQueryResult = Apollo.QueryResult<PastoralStatsQuery, PastoralStatsQueryVariables>;
 export const LikesDocument = gql`
   query Likes($request: WhoReactedPublicationRequest!) {
     whoReactedPublication(request: $request) {

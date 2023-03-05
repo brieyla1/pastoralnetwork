@@ -1,5 +1,5 @@
 import { S3 } from '@aws-sdk/client-s3';
-import type { LensterAttachment } from '@generated/types';
+import type { PastoralAttachment } from '@generated/types';
 import axios from 'axios';
 import { EVER_API, S3_BUCKET, STS_TOKEN_URL } from 'data/constants';
 import { v4 as uuid } from 'uuid';
@@ -25,7 +25,7 @@ const getS3Client = async () => {
  * @param data - Data to upload to IPFS
  * @returns attachment array
  */
-const uploadToIPFS = async (data: any): Promise<LensterAttachment[]> => {
+const uploadToIPFS = async (data: any): Promise<PastoralAttachment[]> => {
   try {
     const client = await getS3Client();
     const files = Array.from(data);
@@ -33,7 +33,7 @@ const uploadToIPFS = async (data: any): Promise<LensterAttachment[]> => {
       files.map(async (_: any, i: number) => {
         const file = data.item(i);
         const params = {
-          Bucket: S3_BUCKET.LENSTER_MEDIA,
+          Bucket: S3_BUCKET.Pastoral_MEDIA,
           Key: uuid()
         };
         await client.putObject({ ...params, Body: file, ContentType: file.type });
@@ -59,11 +59,11 @@ const uploadToIPFS = async (data: any): Promise<LensterAttachment[]> => {
  * @param file - File object
  * @returns attachment or null
  */
-export const uploadFileToIPFS = async (file: File): Promise<LensterAttachment | null> => {
+export const uploadFileToIPFS = async (file: File): Promise<PastoralAttachment | null> => {
   try {
     const client = await getS3Client();
     const params = {
-      Bucket: S3_BUCKET.LENSTER_MEDIA,
+      Bucket: S3_BUCKET.Pastoral_MEDIA,
       Key: uuid()
     };
     await client.putObject({ ...params, Body: file, ContentType: file.type });

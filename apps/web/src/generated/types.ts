@@ -1,10 +1,10 @@
-export interface LensterAttachment {
+export interface PastoralAttachment {
   item: string;
   type: string;
   altTag: string;
 }
 
-export interface NewLensterAttachment extends Omit<LensterAttachment, 'item'> {
+export interface NewPastoralAttachment extends Omit<PastoralAttachment, 'item'> {
   id: string;
   item?: string;
   previewItem?: string;
@@ -57,7 +57,7 @@ export interface OptimisticTransaction {
   cover?: string;
   author?: string;
   content: string;
-  attachments: LensterAttachment[];
+  attachments: PastoralAttachment[];
 }
 
 export interface MarkupLinkProps {

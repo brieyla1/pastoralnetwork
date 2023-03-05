@@ -1,5 +1,5 @@
 import { aaveMembers } from './aave-members';
-import { lensterMembers } from './lenster-members';
+import { PastoralMembers } from './pastoral-members';
 
 export const mainnetVerified = [
   '0x01afc5', // rac.lens
@@ -212,7 +212,7 @@ export const mainnetVerified = [
   '0x0210', // paris.lens
   '0x0160', // ethglobal.lens
   ...aaveMembers,
-  ...lensterMembers
+  ...PastoralMembers
 ];
 
 export const testnetVerified = [

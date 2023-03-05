@@ -19,8 +19,8 @@ const Profile: FC<Props> = ({ profile }) => {
   }
 
   const title = profile?.name
-    ? `${profile?.name} (@${profile?.handle}) • Lenster`
-    : `@${profile?.handle} • Lenster`;
+    ? `${profile?.name} (@${profile?.handle}) • Pastoral`
+    : `@${profile?.handle} • Pastoral`;
   const description = profile?.bio ?? '';
   const image = profile
     ? `${USER_CONTENT_URL}/${AVATAR}/${getIPFSLink(

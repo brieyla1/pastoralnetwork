@@ -46,7 +46,7 @@ const EnableMessages: FC = () => {
         </p>
       </div>
       <p className="mr-10 text-sm leading-[22px]">
-        <Trans>Activate XMTP to start using Lenster to send end-to-end encrypted DMs to frens.</Trans>
+        <Trans>Activate XMTP to start using Pastoral to send end-to-end encrypted DMs to frens.</Trans>
       </p>
       <Button
         className={clsx({ 'text-sm': true }, `mr-auto`)}

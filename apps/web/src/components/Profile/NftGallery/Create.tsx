@@ -238,13 +238,13 @@ const Create: FC<Props> = ({ showModal, setShowModal }) => {
           <Picker />
         ) : (
           <textarea
-            className="w-full resize-none border-none bg-white py-2 px-4 outline-none !ring-0 dark:bg-gray-800"
+            className="bg-card w-full resize-none border-none py-2 px-4 outline-none !ring-0 dark:bg-gray-800"
             value={gallery.name}
             onChange={(e) => setGallery({ ...gallery, name: e.target.value, items: gallery.items })}
             rows={4}
           />
         )}
-        <div className="absolute bottom-0 flex w-full items-center justify-between rounded-b-lg bg-white p-4 dark:bg-gray-800">
+        <div className="bg-card absolute bottom-0 flex w-full items-center justify-between rounded-b-lg p-4 dark:bg-gray-800">
           {currentStep === 'NAME' ? (
             <EmojiPicker setEmoji={(emoji) => onPickEmoji(emoji)} />
           ) : (

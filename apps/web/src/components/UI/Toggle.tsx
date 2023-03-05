@@ -23,7 +23,7 @@ export const Toggle: FC<Props> = ({ on, setOn }) => {
         aria-hidden="true"
         className={clsx(
           on ? 'translate-x-5' : 'translate-x-0',
-          'pointer-events-none inline-block h-[18px] w-[18px] transform rounded-full bg-white shadow-lg ring-0 transition duration-200 ease-in-out'
+          'bg-card pointer-events-none inline-block h-[18px] w-[18px] transform rounded-full shadow-lg ring-0 transition duration-200 ease-in-out'
         )}
       />
     </Switch>

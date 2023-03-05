@@ -44,7 +44,7 @@ const retryLink = new RetryLink({
 const clearStorage = () => {
   localStorage.removeItem('accessToken');
   localStorage.removeItem('refreshToken');
-  localStorage.removeItem(LS_KEYS.LENSTER_STORE);
+  localStorage.removeItem(LS_KEYS.Pastoral_STORE);
   localStorage.removeItem(LS_KEYS.TRANSACTION_STORE);
   localStorage.removeItem(LS_KEYS.MESSAGE_STORE);
 };

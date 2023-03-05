@@ -67,7 +67,7 @@ const ReviewSelection = () => {
               onClick={() => onRemoveItem(item)}
               className="bg-brand-500 absolute right-2 top-2 rounded-full"
             >
-              <XIcon className="h-6 w-6 rounded-full bg-white p-1 text-black" />
+              <XIcon className="bg-card h-6 w-6 rounded-full p-1 text-black" />
             </button>
             <SingleNFT nft={item as Nft} linkToDetail={false} />
           </div>

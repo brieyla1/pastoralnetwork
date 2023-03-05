@@ -19,7 +19,7 @@ import { Mixpanel } from '@lib/mixpanel';
 import { t } from '@lingui/macro';
 import clsx from 'clsx';
 import { APP_NAME, ERROR_MESSAGE } from 'data/constants';
-import { useLensterStatsQuery } from 'lens';
+import { usePastoralStatsQuery } from 'lens';
 import type { NextPage } from 'next';
 import type { FC, ReactNode } from 'react';
 import { useEffect } from 'react';
@@ -77,11 +77,11 @@ const Stats: NextPage = () => {
     Mixpanel.track(PAGEVIEW, { page: 'stafftools', subpage: 'stats' });
   }, []);
 
-  const { data, loading, error } = useLensterStatsQuery({
+  const { data, loading, error } = usePastoralStatsQuery({
     variables: { request: { sources: [APP_NAME] } }
   });
 
-  const { data: todayData, loading: todayLoading } = useLensterStatsQuery({
+  const { data: todayData, loading: todayLoading } = usePastoralStatsQuery({
     variables: {
       request: {
         sources: [APP_NAME],
@@ -91,7 +91,7 @@ const Stats: NextPage = () => {
     }
   });
 
-  const { data: yesterdayData, loading: yesterdayLoading } = useLensterStatsQuery({
+  const { data: yesterdayData, loading: yesterdayLoading } = usePastoralStatsQuery({
     variables: {
       request: {
         sources: [APP_NAME],

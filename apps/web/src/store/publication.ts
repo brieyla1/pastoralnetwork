@@ -1,4 +1,4 @@
-import type { NewLensterAttachment } from '@generated/types';
+import type { NewPastoralAttachment } from '@generated/types';
 import { create } from 'zustand';
 
 interface PublicationState {
@@ -13,10 +13,10 @@ interface PublicationState {
     cover: string;
     coverMimeType: string;
   }) => void;
-  attachments: NewLensterAttachment[];
-  setAttachments: (attachments: NewLensterAttachment[]) => void;
-  addAttachments: (attachments: NewLensterAttachment[]) => void;
-  updateAttachments: (attachments: NewLensterAttachment[]) => void;
+  attachments: NewPastoralAttachment[];
+  setAttachments: (attachments: NewPastoralAttachment[]) => void;
+  addAttachments: (attachments: NewPastoralAttachment[]) => void;
+  updateAttachments: (attachments: NewPastoralAttachment[]) => void;
   removeAttachments: (ids: string[]) => void;
   isUploading: boolean;
   setIsUploading: (isUploading: boolean) => void;

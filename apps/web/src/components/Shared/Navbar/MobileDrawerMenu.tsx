@@ -61,7 +61,7 @@ const MobileDrawerMenu: FC = () => {
             </div>
           </div>
         </Link>
-        <div className="bg-white dark:bg-gray-900">
+        <div className="bg-card dark:bg-gray-900">
           <div className="divider" />
           {profiles.length > 1 && (
             <SwitchProfile className="py-3 px-4 hover:bg-gray-100 dark:hover:bg-gray-800" />
@@ -70,7 +70,7 @@ const MobileDrawerMenu: FC = () => {
           <Status className="py-3 px-4 hover:bg-gray-100 dark:hover:bg-gray-800" />
           <div className="divider" />
         </div>
-        <div className="bg-white dark:bg-gray-900">
+        <div className="bg-card dark:bg-gray-900">
           <div className="divider" />
           <div>
             <Link href={`/u/${formatHandle(currentProfile?.handle)}`} onClick={closeDrawer}>
@@ -88,7 +88,7 @@ const MobileDrawerMenu: FC = () => {
           </div>
           <div className="divider" />
         </div>
-        <div className="bg-white dark:bg-gray-900">
+        <div className="bg-card dark:bg-gray-900">
           <div className="divider" />
           <div>
             <Contact className="py-3 hover:bg-gray-100 dark:hover:bg-gray-800" onClick={closeDrawer} />
@@ -97,7 +97,7 @@ const MobileDrawerMenu: FC = () => {
           <div className="divider" />
         </div>
 
-        <div className="bg-white dark:bg-gray-900">
+        <div className="bg-card dark:bg-gray-900">
           <div className="divider" />
           <div className="hover:bg-gray-100 dark:hover:bg-gray-800">
             <Logout onClick={closeDrawer} className="py-3" />

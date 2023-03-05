@@ -51,7 +51,7 @@ export const Input = forwardRef<HTMLInputElement, Props>(function Input(
             {
               'bg-gray-500 bg-opacity-20 opacity-60': props.disabled
             },
-            'focus-within:border-brand-500 focus-within:ring-brand-400 flex w-full items-center border border-gray-300 bg-white dark:border-gray-700 dark:bg-gray-900'
+            'focus-within:border-brand-500 focus-within:ring-brand-400 bg-card flex w-full items-center border border-gray-300 dark:border-gray-700 dark:bg-gray-900'
           )}
         >
           <input

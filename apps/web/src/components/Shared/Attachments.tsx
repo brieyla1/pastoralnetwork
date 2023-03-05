@@ -1,7 +1,7 @@
 import { Button } from '@components/UI/Button';
 import { Image } from '@components/UI/Image';
 import { LightBox } from '@components/UI/LightBox';
-import type { NewLensterAttachment } from '@generated/types';
+import type { NewPastoralAttachment } from '@generated/types';
 import { ExternalLinkIcon, XIcon } from '@heroicons/react/outline';
 import imageProxy from '@lib/imageProxy';
 import { Mixpanel } from '@lib/mixpanel';
@@ -78,7 +78,7 @@ const Attachments: FC<Props> = ({
   return slicedAttachments?.length !== 0 ? (
     <>
       <div className={clsx(getClass(slicedAttachments?.length)?.row, 'grid gap-2 pt-3')}>
-        {slicedAttachments?.map((attachment: NewLensterAttachment & MediaSet, index: number) => {
+        {slicedAttachments?.map((attachment: NewPastoralAttachment & MediaSet, index: number) => {
           const type = isNew ? attachment.type : attachment.original?.mimeType;
           const url = isNew
             ? attachment.previewItem || getIPFSLink(attachment.item!)
