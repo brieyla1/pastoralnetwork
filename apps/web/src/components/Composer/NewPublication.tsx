@@ -224,6 +224,7 @@ const NewPublication: FC<Props> = ({ publication }) => {
       referenceModuleInitData,
       deadline
     } = typedData.value;
+
     const signature = await signTypedDataAsync(getSignature(typedData));
     const { v, r, s } = splitSignature(signature);
     const sig = { v, r, s, deadline };
@@ -241,6 +242,7 @@ const NewPublication: FC<Props> = ({ publication }) => {
       sig
     };
     setUserSigNonce(userSigNonce + 1);
+
     const { data } = await broadcast({ variables: { request: { id, signature } } });
     if (data?.broadcast.__typename === 'RelayError') {
       return write?.({ recklesslySetUnpreparedArgs: [inputStruct] });
@@ -291,6 +293,7 @@ const NewPublication: FC<Props> = ({ publication }) => {
 
     if (isComment) {
       const { data } = await createCommentViaDispatcher({ variables: { request } });
+
       if (data?.createCommentViaDispatcher?.__typename === 'RelayError') {
         return await createCommentTypedData({ variables });
       }
@@ -463,14 +466,14 @@ const NewPublication: FC<Props> = ({ publication }) => {
         name: isAudioPublication
           ? audioPublication.title
           : `${isComment ? 'Comment' : 'Post'} by @${currentProfile?.handle}`,
-        tags: getTags(publicationContent),
+        tags: [...getTags(publicationContent)],
         animation_url: getAnimationUrl(),
         mainContentFocus: getMainContentFocus(),
         contentWarning: null,
         attributes,
         media: attachmentsInput,
         locale: getUserLocale(),
-        appId: APP_NAME
+        appId: 'Lenster'
       };
 
       let arweaveId = null;
